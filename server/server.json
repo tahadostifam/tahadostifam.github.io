@@ -1,0 +1,80 @@
+{
+    "articles_list": [
+        {
+            "header": "Hello World",
+            "date": "October 19, 2019",
+            "url": "https://google.com"
+        }
+    ],
+    "white_box": [
+        {
+          "icon": "<ion-icon name='server-sharp'></ion-icon>",
+          "header": "Server Configuration",
+          "desc": "I can config Nginx, Apache, PostgreSQL, Docker, Git-Server on Linux-Servers. I do it well!"
+        },
+        {
+          "icon": "<ion-icon name='desktop-outline'></ion-icon>",
+          "header": "Web Development",
+          "desc": "I build websites that be delight and inform and speedy. I develop Web-Applications usage RubyOnRails, Vuejs, Nodejs"
+        },
+        {
+          "icon": "<ion-icon name='school'></ion-icon>",
+          "header": "Teaching",
+          "desc": "I teach what I have learned at Youtube & Medium.com"
+        }
+      ],
+      "image_box": [
+        {
+          "image": "/server/devsparkle-cover.png",
+          "url": "https://github.com/tahadostifam/devsparkle",
+          "desc": "devsparkle is my programming academy. but for some reason we have not deploy it yet."
+        },
+        {
+          "image": "/server/skull-zsh-cover.png",
+          "url": "https://github.com/tahadostifam/skull-zsh",
+          "desc": "skull-zsh is a customized zsh theme that looks very much like a skull. I think it has become very hot and cool.😅"
+        }
+      ],
+      "final_text": {
+        "text": "In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them.",
+        "author": "Andrew Hunt"
+      },
+      "social_media": [
+        {
+          "icon": "<ion-icon name='logo-instagram'></ion-icon>",
+          "url": "https://instagram.com/tahadostifam"
+        },
+        {
+          "icon": "<ion-icon name='logo-whatsapp'></ion-icon>",
+          "url": "https://wa.me/989368392346"
+        },
+        {
+          "icon": "<ion-icon name='logo-github'></ion-icon>",
+          "url": "https://github.com/tahadostifam"
+        }
+    ],
+    "blog_list": [
+      {
+        "image": "/server/skull-zsh-cover.png",
+        "date": "December 7, 2021",
+        "header": "Skull Zsh",
+        "content_file": "hello-world",
+        "categories": [
+          "Linux",
+          "Programming"
+        ]
+      },
+      {
+        "image": "https://picsum.photos/1000/700",
+        "date": "December 7, 2021",
+        "header": "Picsum Photos",
+        "content_file": "hello-photo",
+        "categories": [
+          "Programming",
+          "TahaDostifam"
+        ]
+      }
+    ],
+    "top_articles": [
+    ]
+}

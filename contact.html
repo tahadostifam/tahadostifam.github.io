@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha. Dostifam</title>
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Jost:wght@200;300;400;500&family=Readex+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div v-if="data">
+            <Navbar></Navbar>
+            <div id="router-view"> <!-- NOTE Route View -->
+                <div id="contact_me_section">
+                    <h3 class="header">Contact Info</h3>
+                    <div class="list">
+                        <div class="item">
+                            <span class="title">Address</span>
+                            <span class="value">Imam Khomeini Street, Bonab, Iran</span>
+                        </div>
+                        <div class="item">
+                            <span class="title">Phone</span>
+                            <span class="value">+98 936 839 2346</span>
+                        </div>
+                        <div class="item">
+                            <span class="title">Email</span>
+                            <span class="value">mr.tahadostifam@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- NOTE Route View -->
+        </div>
+        <template v-else>
+            <div class="splash">
+              <div class="center">
+                <span class="item"></span>
+              </div>
+            </div>
+        </template>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./src/assets/js/vue.min.js"></script>
+    <script src="./src/components/navbar.js"></script>
+    <script src="./src/assets/js/axios.min.js"></script>
+    <script src="./src/assets/js/scripts.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+</html>

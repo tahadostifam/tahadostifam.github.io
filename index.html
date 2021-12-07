@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha. Dostifam</title>
+    <link rel="stylesheet" href="./src/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Jost:wght@200;300;400;500&family=Readex+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div v-if="data">
+            <Navbar></Navbar>
+            <div id="router-view"> <!-- NOTE Route View -->
+                <div class="jumbotron bg-lighten-primary">
+                  <h1 class="header">
+                      <ion-icon name="rocket-sharp"></ion-icon>
+                      Knowledge is power
+                  </h1>
+                  <h2 class="sub-header">
+                    My name is Taha. Im a Full-Stack Web Developer Based on Iran/Bonab.
+                  </h2>
+                  <button onclick="window.scrollTo(0, 600)" class="btn btn-primary btn-icon btn-large animated-to-top">
+                    <ion-icon name="arrow-down-outline"></ion-icon>
+                  </button>
+                </div>
+                <div class="global-padding">
+                  <div id="site-section">
+                    <div class="white-box-flex">
+                      <div class="white-box" v-for="item, index in data.white_box" :key="index">
+                        <div class="icon" v-html="item.icon"></div>
+                        <h4 class="header" v-html="item.header"></h4>
+                        <p class="desc" v-html="item.desc"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="portfolio-in-home">
+                    <h2 class="section-header" style="margin-top: 40px;">Portfolio</h2>
+                    <div class="image-box-grid">
+            
+                      <a :href="item.url" v-for="item, index in data.image_box" :key="index">
+                        <div class="image-box">
+                          <div class="image bg-overlay">
+                            <img :src="item.image" alt="image" onload="window.loadLazyImage(this)">
+                          </div>
+                          <p class="desc" v-html="item.desc"></p>
+                        </div>
+                      </a>
+            
+                    </div>
+                  </div>
+                </div>
+                <div id="top-articles" class="bg-lighten-primary" style="margin-top: 40px; padding-bottom: 15px;" v-if="data.top_articles.length > 0">
+                  <div class="global-padding" style="padding-top: 10px; padding-bottom: 10px; overflow: hidden">
+                    <h2 class="section-header">Top Articles</h2>
+                    <div class="swiper box-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide article-box" v-for="item, index in data.top_articles" :key="index">
+                          <a :href="item.url">
+                            <div class="cover image bg-overlay">
+                              <img :src="item.image" alt="image" onload="window.loadLazyImage(this)">
+                            </div>
+                            <span class="date" v-html="item.date"></span>
+                            <h2 class="header" v-html="item.header"></h2>
+                            <div class="avatar">
+                              <div class="image bg-overlay">
+                                <img src="https://github.com/tahadostifam.png" alt="avatar" onload="window.loadLazyImage(this)">
+                              </div>
+                              <div class="texts">
+                                <span class="author">by Taha Dostifam</span>
+                                <span class="desc">Full-Stack Web Developer</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="final_text">
+                  <h4 v-html="data.final_text.text"></h4>
+                  <h5 v-html="'- ' + data.final_text.author"></h5>
+                </div>
+                <div class="footer">
+                  <div class="social_media">
+                    <a :href="item.url" class="item" v-for="item, index in data.social_media" :key="index">
+                      <div class="icon" v-html="item.icon"></div>
+                    </a>
+                  </div>
+                  <span>Copyright ©2021</span>
+                </div>
+            </div> <!-- NOTE Route View -->
+        </div>
+        <template v-else>
+            <div class="splash">
+              <div class="center">
+                <span class="item"></span>
+              </div>
+            </div>
+        </template>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./src/assets/js/swiper-bundle.min.js" defer></script>
+    <script src="./src/assets/js/vue.min.js"></script>
+    <script src="./src/components/navbar.js"></script>
+    <script src="./src/components/show_articles.js"></script>
+    <script src="./src/assets/js/axios.min.js"></script>
+    <script src="./src/assets/js/scripts.js"></script>
+    <script src="./src/main.js"></script>
+    <script>
+      window.onload = () => {
+        const swiper = new Swiper('.swiper', {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          breakpoints: {
+              1200: {
+                  slidesPerView: 3,
+              },
+              800: {
+                  slidesPerView: 2,
+              },
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          }
+        });
+      }
+    </script>
+</body>
+</html>
