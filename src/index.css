@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('./assets/fonts/Rubik/Rubik.ttf');
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('./assets/fonts/Vazir/Vazirmatn-Regular.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #090a0a;
+  --border-color: #1e1f1f;
+  --primary-color: #22aec0;
+}
+
+body{
+  font-family: 'Rubik', 'Vazir';
+  background-color: var(--bg-color);
+}
+
+a{
+  text-decoration: none;
+}

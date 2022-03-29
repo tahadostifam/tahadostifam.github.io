@@ -1,0 +1,49 @@
+#header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#header .__container__ {
+    width: 1000px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .navbar{
+    
+}
+
+#header #brand {
+    font-weight: bolder;
+    font-size: 35px;
+    color: #fdfdfd;
+}
+
+#header #brand span{
+    color: var(--primary-color);
+}
+
+#header .nav-item{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Rubik', 'Vazir';
+    text-transform: none;
+    margin: 0 5px;
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: #fdfdfd;
+}
+
+#header .nav-item:hover{
+    color: var(--primary-color);
+}
