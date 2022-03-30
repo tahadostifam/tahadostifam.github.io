@@ -38,7 +38,8 @@ class Header extends React.Component {
     this.state = { 
       active_nav_item: 0
     }
-    this.toggleMobileMenuButton = React.createRef();
+    this.toggleMobileMenuButtonRef = React.createRef();
+    this.navbarRef = React.createRef()
   }
 
   makeClassNameForNavItem(index) {
@@ -49,12 +50,19 @@ class Header extends React.Component {
     return base
   }
 
-  toggleMobileMenu(){
-    const button = document.querySelector(".toggleMobileMenu")
+  toggleMobileMenu = () => {
+    const button = this.toggleMobileMenuButtonRef.current;
+    const navbar = this.navbarRef.current;
     if (button.classList.contains("active")) {
       button.classList.remove('active')
+      if (navbar.classList.contains("__show__")) {
+        navbar.classList.remove("__show__")
+      }
     } else {
       button.classList.add('active')
+      if (!navbar.classList.contains("__show__")) {
+        navbar.classList.add("__show__")
+      }
     }
   }
 
@@ -63,12 +71,15 @@ class Header extends React.Component {
       <header id='header'>
         <div className="__container__">
           <a href="/" id="brand">Taha<span>.</span></a>
-          <div ref={this.toggleMobileMenuButton} onClick={this.toggleMobileMenu} className="toggleMobileMenu">
+          <div ref={this.toggleMobileMenuButtonRef} onClick={this.toggleMobileMenu} className="toggleMobileMenu">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <nav className="navbar">
+          <nav className="navbar" ref={this.navbarRef}>
+            <div onClick={this.toggleMobileMenu} className="closeMobileMenu">
+              <ion-icon name="close-outline"></ion-icon>
+            </div>
             {
               navbarItems.map(
                 (item, index) =>

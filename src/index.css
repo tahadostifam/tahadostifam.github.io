@@ -23,6 +23,7 @@
 body{
   font-family: 'Rubik', 'Vazir';
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 a{
