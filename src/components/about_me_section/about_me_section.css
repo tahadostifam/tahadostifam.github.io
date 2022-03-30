@@ -1,13 +1,25 @@
 #about_me_section{
     width: 100%;
     margin-top: 100px;
-    padding: 0 150px;
+    padding: 0 300px;
+}
+
+@media screen and (max-width: 1400px) {
+    #about_me_section{
+        padding: 0 200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #about_me_section{
+        padding: 0 100px;
+    }
 }
 
 #about_me_section #about_me_intro {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 35px;
     margin-bottom: 40px;
 }
 
@@ -34,4 +46,30 @@
 
 #about_me_section #about_me_intro_box div{
     flex: 50%;
+}
+
+@media screen and (max-width: 900px) {
+    #about_me_section{
+        padding: 0 50px;
+    }
+    #about_me_section #about_me_intro {
+        display: block;
+    }
+    #about_me_section .avatar{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    #about_me_section #about_me_intro_box{
+        display: block;
+    }
+    #about_me_section #about_me_intro_box div:first-child{
+        margin-bottom: 20px;
+    }
+    #about_me_section #about_me_intro_box #download_cv_button{
+        width: 100%;
+    }
 }

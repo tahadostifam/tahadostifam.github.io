@@ -29,7 +29,7 @@ export default function about_me_section() {
                     <p style={{color: "#fff", lineHeight: "25px"}}>
                         Im Taha Dostifam, Full Stack Web Developer from Iran, Bonab. I have rich experience in web site design and building and customization, also im good at Managing.
                     </p>
-                    <button style={{marginTop: "20px"}} className="btn btn-primary btn-rounded">Download CV</button>
+                    <button id='download_cv_button' style={{marginTop: "20px"}} className="btn btn-primary btn-rounded">Download CV</button>
                 </div>
                 <div>
                     {
