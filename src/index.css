@@ -63,3 +63,51 @@ a{
   bottom: 5px;
   box-shadow: 0px 0px 20px 0.5rem var(--primary-shadow);
 }
+
+.section-header{
+  color: #fff;
+  position: relative;
+}
+
+.section-header::before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-image: url('./assets/images/dots-bg-light.svg');
+  background-repeat: no-repeat;
+  top: -15px;
+  left: -17px;
+}
+
+.progress{
+  width: 100%;
+}
+
+.progress .progress-bar{
+  width: 100%;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #111111;
+}
+
+.progress .progress-bar .progress-filled{
+  width: 100%;
+  height: 6px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+}
+
+.progress .progress-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.progress .progress-label span:first-child{
+  font-weight: bold;
+}
