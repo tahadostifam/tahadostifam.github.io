@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
     #header .__container__{
         width: 900px;
     }
@@ -105,10 +105,11 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
     #header .navbar{
         right: -100%;
         width: 100%;
+        border: none;
     }
 }
 

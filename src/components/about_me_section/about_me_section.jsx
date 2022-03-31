@@ -18,7 +18,7 @@ const progressBars = [
 
 export default function about_me_section() {
   return (
-    <div id="about_me_section">
+    <div id="about_me_section" className="container">
         <h1 className="section-header" style={{marginBottom: "50px"}}>About Me</h1>
         <div id="about_me_intro">
             <div className="avatar">
@@ -29,12 +29,12 @@ export default function about_me_section() {
                     <p style={{color: "#fff", lineHeight: "25px"}}>
                         Im Taha Dostifam, Full Stack Web Developer from Iran, Bonab. I have rich experience in web site design and building and customization, also im good at Managing.
                     </p>
-                    <button id='download_cv_button' style={{marginTop: "20px"}} className="btn btn-primary btn-rounded">Download CV</button>
+                    <button id='download_cv_button' style={{marginTop: "20px"}} className="btn btn-primary btn-rounded btn-animate">Download CV</button>
                 </div>
                 <div>
                     {
-                        progressBars.map((p) => {
-                            return (<div className="progress" style={{marginBottom: "25px"}}>
+                        progressBars.map((p, index) => {
+                            return (<div className="progress" style={{marginBottom: "25px"}} key={index}>
                                 <div className="progress-label">
                                     <span>{p.label}</span>
                                     <span>{`${p.percent}%`}</span>

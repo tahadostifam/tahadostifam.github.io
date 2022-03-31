@@ -1,19 +1,5 @@
 #about_me_section{
-    width: 100%;
     margin-top: 100px;
-    padding: 0 300px;
-}
-
-@media screen and (max-width: 1400px) {
-    #about_me_section{
-        padding: 0 200px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    #about_me_section{
-        padding: 0 100px;
-    }
 }
 
 #about_me_section #about_me_intro {
@@ -48,10 +34,7 @@
     flex: 50%;
 }
 
-@media screen and (max-width: 900px) {
-    #about_me_section{
-        padding: 0 50px;
-    }
+@media screen and (max-width: 1000px) {
     #about_me_section #about_me_intro {
         display: block;
     }
