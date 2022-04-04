@@ -16,7 +16,7 @@ const progressBars = [
     },
 ]
 
-export default function about_me_section() {
+export default function AboutMeSection() {
   return (
     <div data-aos="fade-left" data-aos-duration="1500">
         <div id="about_me_section" className="container">

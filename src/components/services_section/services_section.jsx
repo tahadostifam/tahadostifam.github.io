@@ -39,7 +39,7 @@ const servicesBoxs = [
     },
 ]
 
-export default function services_section() {
+export default function ServicesSection() {
   return (
     <div data-aos="fade-right" data-aos-duration="1500">
         <div className="container">

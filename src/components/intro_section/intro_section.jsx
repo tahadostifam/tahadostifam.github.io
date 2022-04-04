@@ -1,7 +1,7 @@
 import React from 'react'
 import './intro_section.css'
 
-export default function intro_section() {
+export default function IntroSection() {
   return (
     <React.Fragment>
         <div id="intro_section">
@@ -28,8 +28,8 @@ export default function intro_section() {
             </div>
             <button style={{marginTop: "20px"}} className="btn btn-primary btn-rounded btn-animate">Hire Me</button>            
         </div>
-        <div style={{width: "100%", textAlign: "center", marginBottom: "20px", userSelect: "none"}}>
-            <div style={{color: "#ddd", fontSize: "12px", marginBottom: "8px"}}>Scroll Down</div>
+        <div onClick={() => window.scrollTo(0,760)} style={{width: "100%", textAlign: "center", marginBottom: "20px", userSelect: "none", cursor: "pointer"}}>
+            <div style={{color: "#ddd", cursor: "pointer", fontSize: "12px", marginBottom: "8px"}}>Scroll Down</div>
             <button id='scrollDownButton'>
                 <span></span>
             </button>
