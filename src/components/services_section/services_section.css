@@ -4,8 +4,9 @@
 
 #services_section #services_section_grid{
     display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto auto;
+    --grid-gap: 20px;
+    grid-column-gap: var(--grid-gap);
+    grid-template-columns: calc(100% / 3 - (var(--grid-gap) / 3)) calc(100% / 3 - (var(--grid-gap) / 3)) calc(100% / 3 - (var(--grid-gap) / 3));
 }
 
 @media screen and (max-width: 1000px) {

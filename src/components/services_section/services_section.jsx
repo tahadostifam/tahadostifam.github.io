@@ -62,11 +62,10 @@ export default function services_section() {
                     }
                 </div>
             </div>
-            <div style={{textAlign: "center", color: "#fff", width: "100%", display: "block", marginTop: "20px"}}>
+            <div style={{textAlign: "center", color: "#fff", width: "100%", display: "block", marginTop: "20px", marginBottom: "20px"}}>
                 Looking for a custom job? Click here to contact me! 😃
             </div>
         </div>
-
     </div>
   )
 }
