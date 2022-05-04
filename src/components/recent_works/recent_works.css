@@ -29,6 +29,7 @@
     overflow: hidden;
     border-radius: 12px;
     background-color: #111111;
+    margin-bottom: 20px;
 }
 
 #recent_works #recent_works_grid .item img{

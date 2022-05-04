@@ -84,7 +84,6 @@ export default function RecentWorks() {
             groupItems.map((g, index) => {
               return displayByActiveItem(g.group) ?
               <div key={index} className="item">
-                {displayByActiveItem(g.group).toString()} {g.group}
                 <img src={g.image} alt="" onLoad={lazyMe}/>
                 <div className="on_hover">
                   <span className="group_name">{groups[g.group].name}</span>
