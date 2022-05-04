@@ -44,7 +44,7 @@ export default function ServicesSection() {
     <div data-aos="fade-right" data-aos-duration="1500">
         <div className="container">
             <div id="services_section">
-                <h1 class="section-header" style={{marginBottom: "50px"}}>Services</h1>
+                <h1 className="section-header" style={{marginBottom: "50px"}}>Services</h1>
                 <div id="services_section_grid">
                     {
                         servicesBoxs.map((box, index) => {

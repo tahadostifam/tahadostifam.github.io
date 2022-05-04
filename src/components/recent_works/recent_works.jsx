@@ -5,13 +5,12 @@ import './recent_works.css'
 const groups = [
   {
     name: "All",
-    isAll: true
   },
   {
-    name: "WebSite"
+    name: "WebSite",
   },
   {
-    name: "Api"
+    name: "Api",
   }
 ]
 
@@ -19,15 +18,34 @@ const groupItems = [
   {
     group: 0,
     header: "Tahagram!",
+    image: "https://picsum.photos/700/500",
     url: "github.com/tahadostifam/Tahagram.git"
-  }
+  },
+  {
+    group: 0,
+    header: "Tahagram!",
+    image: "https://picsum.photos/700/500",
+    url: "github.com/tahadostifam/Tahagram.git"
+  },
+  {
+    group: 1,
+    header: "Tahagram!",
+    image: "https://picsum.photos/700/500",
+    url: "github.com/tahadostifam/Tahagram.git"
+  },
+  {
+    group: 2,
+    header: "Tahagram!",
+    image: "https://picsum.photos/700/500",
+    url: "github.com/tahadostifam/Tahagram.git"
+  },
 ]
 
 
 export default function RecentWorks() {
-  const [active_group, setActiveGroup] = useState(0)
-  function activateGroupItem(index){
-    setActiveGroup(index)
+  const [activeGroup, setActiveGroup] = useState({name: "All"})
+  function activateGroupItem(item){
+    setActiveGroup(item)
   }
   function makeClassForGroupItem(index){
     let base = "item"
@@ -37,11 +55,13 @@ export default function RecentWorks() {
     return base
   }
   function isActiveGroup(index){
-    return index === active_group
+    return groups[index].name === activeGroup.name
   }
   function displayByActiveItem(index){
-    if (groups[index].isAll) return true
-    if (active_group === index) {
+    const itemIndex = groups.findIndex(({ name: _name_ }) =>  _name_ === activeGroup.name)
+    if (itemIndex === index) {
+      return true
+    } else if (itemIndex === 0) {
       return true
     }
     return false
@@ -50,10 +70,11 @@ export default function RecentWorks() {
   <div data-aos="fade-left" data-aos-duration="1500">
     <div className="container" style={{marginTop: "100px"}}>
       <div id='recent_works'>
-        <h1 class="section-header" style={{marginBottom: "30px"}}>Recent Works</h1>
+        <h1 className="section-header" style={{marginBottom: "30px"}}>Recent Works</h1>
         <div id="recent_works_sorter_panel">
           {
             groups.map((item, index) => {
+              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               return <a onClick={() => activateGroupItem(item)} key={index} className={makeClassForGroupItem(index)}>{item.name}</a>
             })
           }
@@ -63,7 +84,8 @@ export default function RecentWorks() {
             groupItems.map((g, index) => {
               return displayByActiveItem(g.group) ?
               <div key={index} className="item">
-                <img src="https://picsum.photos/700/500" alt="" onLoad={lazyMe}/>
+                {displayByActiveItem(g.group).toString()} {g.group}
+                <img src={g.image} alt="" onLoad={lazyMe}/>
                 <div className="on_hover">
                   <span className="group_name">{groups[g.group].name}</span>
                   <h1>{g.header}</h1>
