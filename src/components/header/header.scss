@@ -1,0 +1,160 @@
+$color_1: #fdfdfd;
+$color_2: var(--primary-color);
+$color_3: #fff;
+$font-family_1: "Rubik", "Vazir";
+$background-color_1: transparent;
+$background-color_2: var(--bg-color);
+$background-color_3: var(--primary-color);
+$background-color_4: #fff;
+
+#header {
+    position: relative;
+    z-index: 90;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid var(--border-color);
+    .__container__ {
+        width: 1100px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #brand {
+        font-weight: bolder;
+        font-size: 35px;
+        color: $color_1;
+        span {
+            color: $color_2;
+        }
+    }
+    .nav-item {
+        border: none;
+        outline: none;
+        background-color: $background-color_1;
+        font-family: $font-family_1;
+        text-transform: none;
+        margin: 0 5px;
+        padding: 12px 18px;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.4s ease;
+        color: $color_1;
+        &:hover {
+            color: $color_2;
+        }
+    }
+    .nav-item.nav-item-active {
+        color: $color_2;
+    }
+    .navbar.__show__ {
+        right: 0 !important;
+    }
+    .closeMobileMenu {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 17px;
+        left: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        color: $color_3;
+    }
+    .toggleMobileMenu {
+        display: none;
+        position: relative;
+        top: 2px;
+        padding: 6.5px 10px;
+        width: 62px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 3px;
+        overflow: hidden;
+        span {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            margin: 5px 0;
+            display: block;
+            background-color: $background-color_4;
+            float: left;
+            right: 0;
+            transition: 0.3s ease, opacity 0.4s ease;
+            transition-duration: 0.4s;
+        }
+    }
+}
+@media screen and (max-width: 1250px) {
+    #header {
+        .__container__ {
+            width: 900px;
+        }
+    }
+}
+@media screen and (max-width: 950px) {
+    #header {
+        .__container__ {
+            width: 100%;
+            padding: 0 20px;
+        }
+        .toggleMobileMenu {
+            display: block !important;
+        }
+        .navbar {
+            position: fixed;
+            top: -15px;
+            bottom: 0;
+            right: -450px;
+            width: 400px;
+            height: 100vh;
+            background-color: $background-color_2;
+            border-left: 1px solid var(--border-color);
+            display: block;
+            transition: right 0.4s ease;
+            padding-top: 70px;
+            .nav-item {
+                position: relative;
+                width: 50%;
+                display: block;
+                text-align: left;
+            }
+            .nav-item.nav-item-active {
+                padding-left: 30px;
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    height: 8px;
+                    width: 4px;
+                    margin-left: -10px;
+                    box-shadow: 0px 0px 30px 0.2rem var(--primary-color);
+                    background-color: $background-color_3;
+                    border-radius: 2px;
+                    content: "";
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    #header {
+        .navbar {
+            right: -100%;
+            width: 100%;
+            border: none;
+        }
+    }
+}
+@media screen and (min-width: 950px) {
+    #header {
+        .closeMobileMenu {
+            display: none !important;
+        }
+    }
+}

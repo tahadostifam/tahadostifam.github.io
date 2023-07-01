@@ -1,5 +1,5 @@
-import React from 'react'
-import './header.css'
+import React from 'react';
+import './header.scss';
 
 const navbarItems = [
   {
@@ -30,43 +30,43 @@ const navbarItems = [
     text: "Contact",
     onClick: () => { }
   },
-]
+];
 
 class Header extends React.Component {
-  constructor(){
-    super()
-    this.state = { 
+  constructor() {
+    super();
+    this.state = {
       active_nav_item: 0
-    }
+    };
     this.toggleMobileMenuButtonRef = React.createRef();
-    this.navbarRef = React.createRef()
+    this.navbarRef = React.createRef();
   }
 
   makeClassNameForNavItem(index) {
-    let base = "nav-item"
+    let base = "nav-item";
     if (this.state.active_nav_item === index) {
-      base += " nav-item-active"
+      base += " nav-item-active";
     }
-    return base
+    return base;
   }
 
   toggleMobileMenu = () => {
     const button = this.toggleMobileMenuButtonRef.current;
     const navbar = this.navbarRef.current;
     if (button.classList.contains("active")) {
-      button.classList.remove('active')
+      button.classList.remove('active');
       if (navbar.classList.contains("__show__")) {
-        navbar.classList.remove("__show__")
+        navbar.classList.remove("__show__");
       }
     } else {
-      button.classList.add('active')
+      button.classList.add('active');
       if (!navbar.classList.contains("__show__")) {
-        navbar.classList.add("__show__")
+        navbar.classList.add("__show__");
       }
     }
-  }
+  };
 
-  render() { 
+  render() {
     return (
       <header id='header'>
         <div className="__container__">
@@ -83,7 +83,7 @@ class Header extends React.Component {
             {
               navbarItems.map(
                 (item, index) =>
-                <button key={index} onClick={item.onClick} className={this.makeClassNameForNavItem(index)}>{item.text}</button>
+                  <button key={index} onClick={item.onClick} className={this.makeClassNameForNavItem(index)}>{item.text}</button>
               )
             }
           </nav>
@@ -92,5 +92,5 @@ class Header extends React.Component {
     );
   }
 }
- 
+
 export default Header;
