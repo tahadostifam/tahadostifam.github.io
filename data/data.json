@@ -1,0 +1,83 @@
+{
+    "social_media": [
+        {
+            "href": "https://github.com/",
+            "icon": "icon la la-github"
+        },
+        {
+            "href": "https://twitter.com/",
+            "icon": "icon la la-facebook"
+        }
+    ],
+    "about_me": "<strong>Hello, I’m a Patrick</strong>, web-developer based on Paris. <br />I have rich experience in web site design & building <br /> and customization. Also I am good at <strong>html, css, <br />wordpress, php, jquery, bootstrap.</strong>",
+    "services": [
+        {
+            "icon": "icon la la-html5",
+            "name": "Html",
+            "desc": "Lorem Lorem Lorem"
+        }
+    ],
+    "download_cv": "https://google.com",
+    "blog_url": "https://google.com",
+    "works": {
+        "category": [
+            "Open Source",
+            "News"
+        ],
+        "items": [
+            {
+                "href": "./assets/images/works/work1.jpg",
+                "category": {
+                    "value": "open_source",
+                    "name": "Open Source"
+                },
+                "desc": "Description"
+            },
+            {
+                "href": "./assets/images/works/work1.jpg",
+                "category": {
+                    "value": "open_source",
+                    "name": "Open Source"
+                },
+                "desc": "Description"
+            },
+            {
+                "href": "./assets/images/works/work1.jpg",
+                "category": {
+                    "value": "open_source",
+                    "name": "Open Source"
+                },
+                "desc": "Description"
+            },
+            {
+                "href": "https://picsum.photos/seed/picsum/500/200",
+                "category": {
+                    "value": "news",
+                    "name": "News"
+                },
+                "desc": "Description"
+            },
+            {
+                "href": "./assets/images/works/work1.jpg",
+                "category": {
+                    "value": "open_source",
+                    "name": "Open Source"
+                },
+                "desc": "Description"
+            }
+        ]
+    },
+    "blog": [
+        {
+            "href": "https://github.com/",
+            "image": "./assets/images/works/work1.jpg",
+            "category": "Lorem",
+            "title": "Hello World"
+        }
+    ],
+    "get_in_touch": {
+        "address": "Iran, Bonab.",
+        "email": "mr.tahadostifam@gmail.com",
+        "phone": "+989368392346"
+    }
+}

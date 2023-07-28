@@ -1184,7 +1184,7 @@ textarea.error::-webkit-input-placeholder {
 }
 @media (max-width: 1330px) {
   .card-inner .card-image {
-    right: -16px;
+    right: -15px;
   }
 }
 @media (max-width: 1023px) {
