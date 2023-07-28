@@ -1361,7 +1361,7 @@ textarea.error::-webkit-input-placeholder {
   font-size: 0;
 }
 .service-items .service-item {
-  min-height: 236px;
+  min-height: 370px;
   text-align: left;
 }
 .service-items .service-item .icon {
