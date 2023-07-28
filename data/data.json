@@ -1,78 +1,73 @@
 {
     "social_media": [
         {
-            "href": "https://github.com/",
+            "href": "https://github.com/tahadostifam",
             "icon": "icon la la-github"
         },
         {
-            "href": "https://twitter.com/",
-            "icon": "icon la la-facebook"
+            "href": "https://twitter.com/taha__dev",
+            "icon": "icon la la-twitter"
         }
     ],
-    "about_me": "<strong>Hello, I’m a Patrick</strong>, web-developer based on Paris. <br />I have rich experience in web site design & building <br /> and customization. Also I am good at <strong>html, css, <br />wordpress, php, jquery, bootstrap.</strong>",
+    "about_me": "Hello, I'm <strong>Taha</strong>, a 16-year-old software engineer. Ever since I was young, I've had a passion for technology and programming. I love the challenge of solving complex problems and creating innovative solutions.<br/><br/>I started my journey in software engineering when I was just 10 years old. I began by learning the basics of programming, and over the years, I've continued to build my skills and knowledge. I've worked on a variety of projects, from small web applications to large-scale software systems.",
     "services": [
         {
-            "icon": "icon la la-html5",
-            "name": "Html",
-            "desc": "Lorem Lorem Lorem"
+            "icon": "icon la la-code",
+            "name": "Software development",
+            "desc": "I can develop custom software solutions for clients, ranging from small web applications to large-scale enterprise systems."
+        },
+        {
+            "icon": "icon la la-edit",
+            "name": "Technical writing",
+            "desc": "I can write documentation for software systems, including user manuals, technical specifications, and API documentation. This can be a valuable service for clients who need to make their software more accessible to users or other developers."
+        },
+        {
+            "icon": "icon la la-headphones",
+            "name": "Consulting",
+            "desc": "I can offer consulting services to clients who need help with their existing software systems. This can include services such as code review, performance optimization, security analysis, and architecture design."
+        },
+        {
+            "icon": "icon la la-coffee",
+            "name": "Training and coaching",
+            "desc": "I can offer training and coaching services to help others learn software development skills. This can include services such as one-on-one coaching, group training sessions, or online courses."
         }
     ],
-    "download_cv": "https://google.com",
-    "blog_url": "https://google.com",
+    "download_cv": "https://github.com/tahadostifam/README.md",
+    "blog_url": "https://virgool.io/@mr.tahadostifam",
     "works": {
         "category": [
-            "Open Source",
-            "News"
+            "Open Source"
         ],
         "items": [
             {
-                "href": "./assets/images/works/work1.jpg",
+                "image": "https://raw.githubusercontent.com/tahadostifam/screenfetch/main/desktop19.png",
+                "href": "https://github.com/tahadostifam/skull-zsh",
                 "category": {
                     "value": "open_source",
                     "name": "Open Source"
                 },
-                "desc": "Description"
-            },
-            {
-                "href": "./assets/images/works/work1.jpg",
-                "category": {
-                    "value": "open_source",
-                    "name": "Open Source"
-                },
-                "desc": "Description"
-            },
-            {
-                "href": "./assets/images/works/work1.jpg",
-                "category": {
-                    "value": "open_source",
-                    "name": "Open Source"
-                },
-                "desc": "Description"
-            },
-            {
-                "href": "https://picsum.photos/seed/picsum/500/200",
-                "category": {
-                    "value": "news",
-                    "name": "News"
-                },
-                "desc": "Description"
-            },
-            {
-                "href": "./assets/images/works/work1.jpg",
-                "category": {
-                    "value": "open_source",
-                    "name": "Open Source"
-                },
-                "desc": "Description"
+                "desc": "skull-zsh | A customized zsh theme."
             }
         ]
     },
     "blog": [
         {
-            "href": "https://github.com/",
-            "image": "./assets/images/works/work1.jpg",
-            "category": "Lorem",
-            "title": "Hello World"
+            "href": "https://virgool.io/@mr.tahadostifam/power-of-rubyonrails-td6vzkxjwwgg",
+            "image": "https://files.virgool.io/upload/users/1197181/posts/td6vzkxjwwgg/eqepjs5hg59x.webp",
+            "category": "RubyOnRails",
+            "title": "Power of RubyOnRails!"
+        },
+        {
+            "href": "https://virgool.io/@mr.tahadostifam/%D8%B2%D8%A8%D8%A7%D9%86-%D9%87%D8%A7%DB%8C-%D9%85%D9%81%D8%B3%D8%B1%DB%8C-vs-%D8%B2%D8%A8%D8%A7%D9%86-%D9%87%D8%A7%DB%8C-%DA%A9%D8%A7%D9%85%D9%BE%D8%A7%DB%8C%D9%84%D8%B1%DB%8C-lvz0vidddigc",
+            "image": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Best-Programming-Languages-to-Start-Learning-Today.jpg",
+            "category": "Public",
+            "title": "زبان های مفسری vs زبان های کامپایلری"
+        },
+        {
+            "href": "https://virgool.io/@mr.tahadostifam/%DA%86%D9%87-%D9%81%D8%B1%DB%8C%D9%85%D9%88%D8%B1%DA%A9%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%81%D8%B1%D8%A7%D9%86%D8%AA-%D8%A7%D9%86%D8%AF-%DB%8C%D8%A7%D8%AF-%D8%A8%DA%AF%DB%8C%D8%B1%D9%85-a93cyjgruepy",
+            "image": "https://files.virgool.io/upload/users/1197181/posts/a93cyjgruepy/gdl5waffkd2z.png",
+            "category": "Front-End Frameworks",
+            "title": "چه فریمورکی برای فرانت اند یاد بگیرم؟"
         }
     ],
     "get_in_touch": {
