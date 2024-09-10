@@ -7,14 +7,21 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "watch": "npx tailwindcss -i ./src/styles/tailwind.scss -o ./src/styles/global.css --watch"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.3",
     "@astrojs/mdx": "^3.1.5",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.15.4",
-    "@astrojs/check": "^0.9.3",
+    "rippleui": "^1.12.1",
+    "sass": "^1.78.0",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
   }
 }
