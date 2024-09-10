@@ -4,6 +4,6 @@
 
 @layer components {
     .navbar-item-active {
-        @apply font-bold text-primary;
+        @apply font-bold text-white bg-primary px-2;
     }
 }

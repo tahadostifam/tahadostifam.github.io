@@ -1,30 +1,75 @@
 ---
-import HeaderSocial from "./HeaderSocial.astro";
 import HeaderLinks from "./HeaderLinks.astro";
+
 ---
 
- <header class="px-2 py-1 border-b border-border">
-	<div class="navbar shadow-none">
-		<div class="navbar-start md:justify-between">
-			<a href="/" class="brand text-2xl md:text-3xl">Taha. <span class="text-primary">D</span></a>
-		</div>
-		<div class="navbar-center flex-row gap-10 w-max md:flex hidden">
-			<HeaderLinks/>
-		</div>
-		<div class="navbar-end hidden md:inline-flex">
-			<HeaderSocial className="btn btn-primary"/>
-		</div>
+<script>
+	const isScrollAtTop = function() {
+		const scroll = window.scrollY;
+		if (scroll == 0) {
+			return true
+		}
 
-		<!-- Mobile Menu Button -->
-		<div class="md:hidden flex items-center gap-7">
-			<div class="flex flex-row gap-5">
-				<HeaderSocial className="p-0"/>
-			</div>
+		return false;
+	}
 
-			<label for="mobile-menu-drawer">
-				<svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0,4c0-.55,.45-1,1-1H18c.55,0,1,.45,1,1s-.45,1-1,1H1c-.55,0-1-.45-1-1Zm18,15H1c-.55,0-1,.45-1,1s.45,1,1,1H18c.55,0,1-.45,1-1s-.45-1-1-1Zm5-8H6c-.55,0-1,.45-1,1s.45,1,1,1H23c.55,0,1-.45,1-1s-.45-1-1-1Z"/></svg>
-			</label>
-		</div>
+	function scrollTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		})
+	}
+
+	function loadScrollEvent() {
+		const headerEl = document.getElementById("header")!;
+		const scrollTopButton = document.getElementById("scrollTopButton")!;
+
+		if (isScrollAtTop()) {
+			headerEl.classList.add("is-on-top");
+			scrollTopButton.classList.add("hide");
+			return;
+		}
+		
+		headerEl.classList.remove("is-on-top");
+		scrollTopButton.classList.remove("hide");
+	}
+
+	window.onload = function() {
+	}
+
+	window.addEventListener("scroll", (e) => {
+		loadScrollEvent();
+	})
+
+	document.getElementById("scrollTopButton")?.addEventListener("click", (e) => {
+		scrollTop();
+	})
+	
+	loadScrollEvent();
+</script>
+
+<button id="scrollTopButton" class="fixed bottom-10 right-10 btn btn-primary size-12 p-0 z-50 shadow-xl">
+	<svg class="fill-white" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+		<path d="M17.71,9.88l-4.3-4.29a2,2,0,0,0-2.82,0L6.29,9.88a1,1,0,0,0,0,1.41,1,1,0,0,0,1.42,0L11,8V19a1,1,0,0,0,2,0V8l3.29,3.29a1,1,0,1,0,1.42-1.41Z"/>
+	</svg>
+</button>
+
+ <header id="header" class="navbar shadow-none sticky top-0 z-40 px-4 md:px-10 py-5">
+	<div class="navbar-start md:justify-between">
+		<a href="/" class="brand text-2xl md:text-3xl">Taha. <span class="text-primary">D</span></a>
+	</div>
+
+	<div class="navbar-end flex-row gap-10 w-max md:flex hidden">
+		<HeaderLinks/>
+	</div>
+
+	<!-- Mobile Menu Button -->
+	<div class="md:hidden flex items-center gap-7">
+		<label for="mobile-menu-drawer">
+			<svg class="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M0,4c0-.55,.45-1,1-1H18c.55,0,1,.45,1,1s-.45,1-1,1H1c-.55,0-1-.45-1-1Zm18,15H1c-.55,0-1,.45-1,1s.45,1,1,1H18c.55,0,1-.45,1-1s-.45-1-1-1Zm5-8H6c-.55,0-1,.45-1,1s.45,1,1,1H23c.55,0,1-.45,1-1s-.45-1-1-1Z"/>
+			</svg>
+		</label>
 	</div>
 </header>
 
@@ -34,7 +79,7 @@ import HeaderLinks from "./HeaderLinks.astro";
 
 <div class="drawer drawer-right fixed max-w-full mobile-menu-drawer">
 	<div class="drawer-content pt-10 flex flex-col h-full">
-		<div class="flex flex-row justify-between">
+		<div class="pt-4 flex flex-row justify-between">
 			<label for="mobile-menu-drawer" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
 		</div>
 		
@@ -44,6 +89,22 @@ import HeaderLinks from "./HeaderLinks.astro";
 	</div>
 </div>
 
-<style>
-	
+<style lang="scss">
+	.navbar {
+		background-color: #ffffff;
+	}
+
+	#header {
+		transition: 0.2s ease;
+		&:not(.is-on-top) {
+			box-shadow: 0px 0px 10px #00000038;
+		}
+	}
+
+	#scrollTopButton {
+		transition: 0.3s ease;
+		&.hide {
+			bottom: -100px;
+		}
+	}
 </style>
