@@ -17,7 +17,7 @@ import HeaderLinks from "./HeaderLinks.astro";
 
 		<!-- Mobile Menu Button -->
 		<div class="md:hidden flex items-center gap-7">
-			<div class="flex flex-row gap-3">
+			<div class="flex flex-row gap-5">
 				<HeaderSocial className="p-0"/>
 			</div>
 
@@ -32,18 +32,14 @@ import HeaderLinks from "./HeaderLinks.astro";
 
 <label class="overlay" for="mobile-menu-drawer"></label>
 
-<div class="drawer drawer-right fixed max-w-full">
+<div class="drawer drawer-right fixed max-w-full mobile-menu-drawer">
 	<div class="drawer-content pt-10 flex flex-col h-full">
 		<div class="flex flex-row justify-between">
 			<label for="mobile-menu-drawer" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
 		</div>
-		<div>
-			<h2 class="text-xl font-medium">Create your account</h2>
-			<input class="input py-1.5 my-3" placeholder="Type here..." />
-		</div>
-		<div class="h-full flex flex-row justify-end items-end gap-2">
-			<button class="btn btn-ghost">Cancel</button>
-			<button class="btn btn-primary">Create</button>
+		
+		<div class="flex flex-col gap-6">
+			<HeaderLinks/>
 		</div>
 	</div>
 </div>

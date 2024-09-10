@@ -1706,6 +1706,10 @@ html:has(.drawer-toggle:checked) {
   gap: 1.75rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
