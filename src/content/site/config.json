@@ -1,0 +1,31 @@
+{
+  "home": {
+    "name": "[ Taha. Dostifam ]",
+    "title": "Software Engineer",
+    "introduction": "A 17yo software engineer with a strong interest in compiler design and large-scale software projects. I enjoy tackling complex challenges and building innovative solutions.",
+    "sections": {
+      "blog": {
+        "title": "Writing",
+        "viewAllText": "View all posts"
+      },
+      "projects": {
+        "title": "Projects",
+        "viewAllText": "View all projects"
+      },
+      "experience": {
+        "title": "Experience",
+        "viewAllText": "View full résumé"
+      }
+    },
+    "socialLinks": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/tahadostifam"
+      },
+      {
+        "platform": "Telegram",
+        "url": "https://t.me/tahadostifam"
+      }
+    ]
+  }
+}
