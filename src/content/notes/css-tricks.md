@@ -1,32 +1,62 @@
 ---
-title: "Modern CSS Tricks"
-description: "Useful CSS snippets and modern techniques"
-publishedAt: 2024-01-05
-category: "CSS"
+title: "oh-my-zsh git aliases"
+description: "Some git shorthands of ZSH."
+publishedAt: 2025-01-15
+category: "zsh"
 ---
 
-Some modern CSS tricks I use frequently:
+g | git 
 
-## Container Queries
+gl | git pull 
 
-```css
-.card-container {
-  container-type: inline-size;
-}
+gp | git push 
 
-@container (min-width: 400px) {
-  .card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-}
-```
+gca | git commit -v -a  
 
-## Custom Properties with Fallbacks
+gcm | git checkout master 
 
-```css
-.element {
-  background: var(--custom-bg, #ffffff);
-  color: var(--custom-color, var(--fallback-color, #000000));
-}
-``` 
+gba | git branch -a 
+
+gcp | git cherry-pick 
+
+glgg | git log --graph --max-count=5  
+
+ga | git add  
+
+grh | git reset HEAD  
+
+gsr | git svn rebase  
+
+ggpull | git pull origin  
+
+gdv | git diff -w "$@" | view - 
+
+ggpnp | git pull origin && git push origin  
+
+git-svn-dcommit-push | git svn dcommit && git push github master:svntrunk 
+
+gpa | git add .; git commit -m "$1" 
+
+gst | git status  
+
+gup | git fetch && git rebase 
+
+gc | git commit -v  
+
+gco | git checkout  
+
+gb | git branch 
+
+gcount | git shortlog -sn 
+
+glg | git log --stat --max-count=5  
+
+gss | git status -s 
+
+gm | git merge  
+
+grhh | git reset HEAD --hard  
+
+gsd | git svn dcommit 
+
+ggpush | git push origin  
