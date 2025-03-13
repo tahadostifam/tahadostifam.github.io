@@ -1,5 +1,5 @@
 ---
-title: "Designing Hexagonal ARchitecture"
+title: "Designing Hexagonal Architecture"
 type: "book"
 author: "Tom Hombergs"
 url: "https://reflectoring.io/book/"
