@@ -27,9 +27,9 @@ export const getStaticPaths = (async () => {
 const { typeBookmarks, allTypes } = Astro.props;
 ---
 
-<BaseLayout title="Bookmarks" description="My collection of interesting reads and resources">
+<BaseLayout title="Bookmarks" description="Here are some books and resources I really enjoyed and wanted to share">
   <Container>
-    <BaseHero title="Bookmarks" description="My collection of interesting reads and resources" />
+    <BaseHero title="Bookmarks" description="Here are some books and resources I really enjoyed and wanted to share." />
 
     <Categories plural categories={allTypes} currentPath={Astro.url.pathname} basePath="bookmarks" />
 
