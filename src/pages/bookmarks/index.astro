@@ -11,9 +11,6 @@ type Bookmark = CollectionEntry<"bookmarks">;
 
 const bookmarks = await getCollection("bookmarks");
 const types = [...new Set(bookmarks.map((bookmark: Bookmark) => bookmark.data.type))];
-const sortedBookmarks = bookmarks.sort(
-  (a: Bookmark, b: Bookmark) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
-);
 ---
 
 <BaseLayout title="Bookmarks" description="My collection of interesting reads and resources">
@@ -24,12 +21,11 @@ const sortedBookmarks = bookmarks.sort(
 
     <ContentList>
       {
-        sortedBookmarks.map((bookmark) => (
+        bookmarks.map((bookmark) => (
           <ArticleCard
             title={bookmark.data.title}
             description={bookmark.data.description}
             url={bookmark.data.url}
-            date={bookmark.data.createdAt}
             tags={[bookmark.data.type, `by ${bookmark.data.author}`]}
           />
         ))

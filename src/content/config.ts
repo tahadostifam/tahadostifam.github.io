@@ -94,8 +94,6 @@ const bookmarks = defineCollection({
         type: z.enum(["article", "book", "video"]),
         author: z.string(),
         url: z.string().url(),
-        publishedAt: z.coerce.date(),
-        createdAt: z.coerce.date(),
         description: z.string().optional(),
     })
 });
